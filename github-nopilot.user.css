@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.0.0
+@version     1.1.0
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -39,6 +39,20 @@
 
   /* Ask Copilot button in file view */
   #repos-sticky-header button[class*="AskCopilotButton"] {
+    display: none;
+  }
+
+  /* Hides the "or ask Copilot" part of the main search input */
+  #qb-input-query {
+    display: inline-block;
+    max-width: 108px;
+    overflow: hidden;
+  }
+
+  /* Copilot section of main search dropdown */
+  .ActionListWrap .ActionList-sectionDivider:has(+ .ActionList-sectionDivider #query-builder-test-result-ask-copilot), /* Divider before main element */
+  .ActionListWrap .ActionList-sectionDivider:has(#query-builder-test-result-ask-copilot) /* Main element */
+  {
     display: none;
   }
 }
