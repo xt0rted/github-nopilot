@@ -1,0 +1,44 @@
+/* ==UserStyle==
+@name        GitHub Nopilot
+@namespace   xt0rted
+@version     1.0.0
+@homepageURL https://github.com/xt0rted/github-nopilot
+@updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
+@license     CC-BY-SA-4.0
+@author      Brian Surowiec (https://github.com/xt0rted)
+==/UserStyle== */
+@-moz-document domain("github.com") {
+  /* Page header button */
+  #copilot-chat-header-button {
+    display: none;
+  }
+
+  /* Floating button bottom right */
+  #copilot-floating-button {
+    display: none;
+  }
+
+  /* Your Coplilot link in the user dropdown menu */
+  #__primerPortalRoot__ {
+    div[class*="Dialog__StyledDialog"] {
+      li[class*="Item__LiBox"]:has(a[href="/github-copilot/signup"]) {
+          display: none;
+      }
+    }
+  }
+
+  /* Button in the markdown editor menu */
+  .ActionBar-item button[id^="copilot-md-menu-anchor-issue"] {
+    display: none;
+  }
+
+  /* Ask Copilot button on PR files tab */
+  react-partial[partial-name="copilot-code-chat"] {
+    display: none;
+  }
+
+  /* Ask Copilot button in file view */
+  #repos-sticky-header button[class*="AskCopilotButton"] {
+    display: none;
+  }
+}
