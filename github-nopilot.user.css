@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.1.0
+@version     1.1.1
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -43,7 +43,11 @@
   }
 
   /* Hides the "or ask Copilot" part of the main search input */
-  #qb-input-query {
+  .overflow-hidden:has(> #qb-input-query .AppHeader-search-kbd) {
+    display: inline-flex;
+  }
+
+  #qb-input-query:has(.AppHeader-search-kbd) {
     display: inline-block;
     max-width: 108px;
     overflow: hidden;
