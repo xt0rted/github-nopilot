@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.1.1
+@version     1.2.0
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -34,6 +34,11 @@
 
   /* Ask Copilot button on PR files tab */
   react-partial[partial-name="copilot-code-chat"] {
+    display: none;
+  }
+
+  /* Copilot menu at end of PR file line */
+  div:has(> button[data-testid="copilot-ask-menu"]) {
     display: none;
   }
 
