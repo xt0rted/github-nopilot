@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.5.0
+@version     1.6.0
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -57,6 +57,11 @@
   /* Ask about this diff option of file diff dropdown */
   ul[role="menu"] > li[data-component="ActionList.Divider"]:has(+ li svg.octicon-copilot),
   ul[role="menu"] > li[data-component="ActionList.Divider"] + li:has(svg.octicon-copilot) {
+    display: none;
+  }
+
+  /* Explain error button in actions logs */
+  react-partial[partial-name="copilot-actions-chat-button"] {
     display: none;
   }
 }
