@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.6.0
+@version     1.7.0
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -63,5 +63,12 @@
   /* Explain error button in actions logs */
   react-partial[partial-name="copilot-actions-chat-button"] {
     display: none;
+  }
+
+  #dashboard {
+    /* Ask copilot box on the homepage/news feed */
+    .copilotPreview__container {
+      display: none;
+    }
   }
 }
