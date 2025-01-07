@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.7.0
+@version     1.7.1
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
 @author      Brian Surowiec (https://github.com/xt0rted)
 ==/UserStyle== */
 @-moz-document domain("github.com") {
-  /* Page header button */
-  #copilot-chat-header-button {
+  /* Page header button/dropdown */
+  .AppHeader .AppHeader-globalBar .AppHeader-CopilotChat {
     display: none;
   }
 
