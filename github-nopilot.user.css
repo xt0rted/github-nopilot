@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.7.1
+@version     1.7.2
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -38,7 +38,7 @@
   }
 
   /* Copilot menu at end of PR file line */
-  div:has(> button[data-testid="copilot-ask-menu"]) {
+  div[class*="DiffLinesMenu-module__diff-button-container"]:has(button[class*="AskCopilotButton"]) {
     display: none;
   }
 
