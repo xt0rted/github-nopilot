@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.8.1
+@version     1.8.2
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -56,6 +56,15 @@
   #repos-sticky-header button[class*="AskCopilotButton"] {
     display: none;
   }
+
+  /* Copilot section in file actions menu */
+  ul[role="menu"] > li {
+    &[data-component="ActionList.Divider"]:has(+ li [data-testid="copilot-menu-items"]), /* Divider before main element */
+    &:has([data-testid="copilot-menu-items"]) /* Main element */
+    {
+      display: none;
+    }
+  }
   
   /* Copilot menu in file view */
   .repository-content  {
@@ -69,10 +78,12 @@
   }
 
   /* Copilot section of main search dropdown */
-  .ActionListWrap .ActionList-sectionDivider:has(+ .ActionList-sectionDivider #query-builder-test-result-ask-copilot), /* Divider before main element */
-  .ActionListWrap .ActionList-sectionDivider:has(#query-builder-test-result-ask-copilot) /* Main element */
-  {
-    display: none;
+  .ActionListWrap .ActionList-sectionDivider {
+    &:has(+ .ActionList-sectionDivider #query-builder-test-result-ask-copilot), /* Divider before main element */
+    &:has(#query-builder-test-result-ask-copilot) /* Main element */
+    {
+      display: none;
+    }
   }
   
   /* Ask about this diff option of file diff dropdown */
