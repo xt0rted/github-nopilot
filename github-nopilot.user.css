@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.8.0
+@version     1.8.1
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
@@ -31,15 +31,25 @@
   .ActionBar-item button[id^="copilot-md-menu-anchor-"] {
     display: none;
   }
+  
+  /* PR files tab */
+  #files_bucket {
+    /* Ask Copilot button on PR files tab */
+    react-partial[partial-name="copilot-code-chat"] {
+      display: none;
+    }
 
-  /* Ask Copilot button on PR files tab */
-  react-partial[partial-name="copilot-code-chat"] {
-    display: none;
-  }
+    /* Copilot menu at end of PR file line */
+    div[class*="DiffLinesMenu-module__diff-button-container"]:has(button[class*="AskCopilotButton"]) {
+      display: none;
+    }
 
-  /* Copilot menu at end of PR file line */
-  div[class*="DiffLinesMenu-module__diff-button-container"]:has(button[class*="AskCopilotButton"]) {
-    display: none;
+    /* File options popup */
+    .dropdown-menu {
+      span[data-target="copilot-diff-entry.menuItemsSlot"] {
+        display: none;
+      }
+    }
   }
 
   /* Ask Copilot button in file view */
