@@ -1,16 +1,27 @@
 /* ==UserStyle==
 @name        GitHub Nopilot
 @namespace   xt0rted
-@version     1.8.2
+@version     1.8.3
 @homepageURL https://github.com/xt0rted/github-nopilot
 @updateURL   https://github.com/xt0rted/github-nopilot/raw/refs/heads/main/github-nopilot.user.css
 @license     CC-BY-SA-4.0
 @author      Brian Surowiec (https://github.com/xt0rted)
 ==/UserStyle== */
 @-moz-document domain("github.com") {
-  /* Page header button/dropdown */
-  .AppHeader .AppHeader-globalBar .AppHeader-CopilotChat {
-    display: none;
+  .AppHeader {
+    .AppHeader-globalBar {
+      .AppHeader-globalBar-start {
+        /* 🍔 menu option */
+        nav ul li:has(> a[href="/copilot"]) {
+          display: none;
+        }
+      }
+
+      /* Page header button/dropdown */
+      .AppHeader-CopilotChat {
+        display: none;
+      }
+    }
   }
 
   /* Floating button bottom right */
